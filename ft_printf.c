@@ -1,0 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/02 15:03:54 by egarlasc          #+#    #+#             */
+/*   Updated: 2026/06/02 15:24:51 by egarlasc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_formats(va_list var, char f)
+{
+	int	count;
+
+	count = 0;
+	if (f == '%')
+		count += ft_print_c('%');
+	else if (f == 'i' | f == 'd')
+		count += ft_print_d(va_arg(var, long int));
+	else if (f == 'c')
+		count += ft_print_c(va_arg(var, int));
+	else if (f == 'u')
+		count += ft_print_u(va_arg(var, unsigned int));
+	else if (f == 'p')
+		count += ft_print_ptr(va_arg(var, void *));
+	else if (f == 's')
+		count += ft_print_s(va_arg(var, char *str));
+	else if (f == 'x')
+		count += ft_print_x(va_arg(var, long));
+	else if (f == 'X')
+		count += ft_print_x_up(va_arg(var, long));
+	return (count);
+}
+
+int	ft_printf(const char *str, ...)
+{
+	int		i;
+	int		count;
+	va_list	args;
+
+	count = 0;
+	i = 0;
+	va_start(args, str);
+	while (str[i])
+	{
+		if (str[i] == '%' && str[i + 1])
+		{
+			i++;
+			count += ft_formats(args, str[i]);
+			i++;
+		}
+		if (!str[i])
+			break ;
+		if (str[i] == '%')
+			continue ;
+	}
+}
