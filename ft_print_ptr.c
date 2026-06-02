@@ -6,13 +6,13 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 12:58:37 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/02 13:17:53 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/02 13:23:57 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int      count_x_digits(long n)
+static int	count_x_digits(long n)
 {
-	unsigned long    i;
+	unsigned long	i;
 
 	i = 0;
 	if (n == 0)
