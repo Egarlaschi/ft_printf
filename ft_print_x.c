@@ -6,7 +6,7 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 12:17:21 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/02 12:41:09 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/02 13:19:40 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	count_x_digits(long n)
 	return (i);
 }
 
-int	ft_print_x(unsigned int nbr)
+int	ft_print_x(unsigned long nbr)
 {
 	char			*base;
 	char			c;
