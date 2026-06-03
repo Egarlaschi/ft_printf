@@ -55,5 +55,6 @@ int	ft_printf(const char *str, ...)
 			break ;
 		if (str[i] == '%')
 			continue ;
+		// LA DEVI FINI STA CAZZO DI FUNZIONE!!
 	}
 }
