@@ -6,7 +6,7 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:03:54 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/03 22:51:58 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/03 23:15:00 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_formats(va_list var, char f)
 	if (f == '%')
 		count += ft_print_c('%');
 	else if (f == 'i' || f == 'd')
-		count += ft_print_d(va_arg(var, long int));
+		count += ft_print_d(va_arg(var, int));
 	else if (f == 'c')
 		count += ft_print_c(va_arg(var, int));
 	else if (f == 'u')
@@ -28,9 +28,9 @@ int	ft_formats(va_list var, char f)
 	else if (f == 's')
 		count += ft_print_s(va_arg(var, char *));
 	else if (f == 'x')
-		count += ft_print_x(va_arg(var, long));
+		count += ft_print_x(va_arg(var, unsigned int));
 	else if (f == 'X')
-		count += ft_print_x_up(va_arg(var, long));
+		count += ft_print_x_up(va_arg(var, unsigned int));
 	return (count);
 }
 
