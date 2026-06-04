@@ -6,7 +6,7 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:03:54 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/04 10:21:19 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:36:32 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ int	ft_printf(const char *str, ...)
 			break ;
 		if (str[i] == '%')
 			continue ;
-		write(1, str[i], 1);
+		write(1, &str[i], 1);
 		count++;
 		i++;
 	}
-	va_end(arg);
+	va_end(args);
 	return (count);
 }
