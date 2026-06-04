@@ -6,9 +6,11 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:03:54 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/04 10:03:59 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:21:19 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_formats(va_list var, char f)
 {

@@ -6,9 +6,11 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 11:46:15 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/02 13:23:28 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:22:03 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_print_c(int n)
 {

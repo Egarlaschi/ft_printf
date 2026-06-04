@@ -6,11 +6,11 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 11:54:50 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/02 12:13:11 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:23:18 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 static int	count_uns_digits(unsigned int n)
 {

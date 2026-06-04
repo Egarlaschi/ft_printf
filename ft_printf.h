@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 12:58:37 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/04 10:22:44 by egarlasc         ###   ########.fr       */
+/*   Created: 2026/06/04 10:12:40 by egarlasc          #+#    #+#             */
+/*   Updated: 2026/06/04 10:21:45 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-static int	count_x_digits(long n)
-{
-	unsigned long	i;
+#include <stdarg.h>
+#include <unistd.h>
+#include "libft/libft.h"
 
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n > 0)
-	{
-		n /= 16;
-		i++;
-	}
-	return (i);
-}
+int	ft_printf(const char *str, ...);
+int	ft_print_x_up(unisgned long nbr);
+int	ft_print_x(unisgned long nbr);
+int	ft_print_u(unsigned int n);
+int	ft_print_s(char *s);
+int	ft_print_ptr(void *ptr);
+int	ft_print_d(int n);
+int	ft_print_c(int n);
 
-int	ft_print_ptr(void *ptr)
-{
-	unsigned long	nb;
-	unsigned long	n;
-
-	if (!ptr)
-		return (write(1, "(nil)", 5));
-	nb = (unsigned long)ptr;
-	n = nb;
-	write (1, "0x", 2);
-	ft_print_x(nb);
-	return (count_x_digits(n) + 2);
-}
+#endif

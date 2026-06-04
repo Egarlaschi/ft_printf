@@ -6,9 +6,11 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 12:17:21 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/02 13:20:02 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:24:13 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 static int	count_x_digits_up(long n)
 {
