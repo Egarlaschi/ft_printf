@@ -6,13 +6,13 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 12:58:37 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/04 10:22:44 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:57:28 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	count_x_digits(long n)
+static int	count_x_digits(unsigned long n)
 {
 	unsigned long	i;
 
