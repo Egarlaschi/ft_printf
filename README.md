@@ -1,89 +1,79 @@
-*This project has been created as part of the 42 curriculum by egarlasc*
-# ft_printf
+# **ft\_printf**
 
-Reimplementazione della funzione `printf` della libreria standard C.
-Il progetto fa parte del curriculum di **42** e ha come obiettivo approfondire la gestione delle **funzioni variadiche** (`stdarg.h`) e la formattazione dell'output.
+Re-implementation of the standard C library function printf.  
+This project is part of the **42** curriculum and aims to deepen the understanding of **variadic functions** (stdarg.h) and output formatting.
 
-## Descrizione
+## **Description**
 
-`ft_printf` riproduce il comportamento di `printf(3)`, restituendo il numero totale di caratteri stampati.
-La funzione gestisce le seguenti **conversioni**:
+ft\_printf replicates the behavior of printf(3), returning the total number of characters printed.  
+The function handles the following **conversions**:
 
-| Specifier | Descrizione |
-|:---------:|:------------|
-| `%c` | Stampa un singolo carattere |
-| `%s` | Stampa una stringa |
-| `%p` | Stampa un puntatore in formato esadecimale |
-| `%d` | Stampa un numero decimale (base 10) |
-| `%i` | Stampa un intero in base 10 |
-| `%u` | Stampa un numero decimale senza segno |
-| `%x` | Stampa un numero in esadecimale (minuscolo) |
-| `%X` | Stampa un numero in esadecimale (maiuscolo) |
-| `%%` | Stampa il carattere percentuale |
+| Specifier | Description |
+| :---- | :---- |
+| %c | Prints a single character |
+| %s | Prints a string |
+| %p | Prints a pointer in hexadecimal format |
+| %d | Prints a decimal (base 10\) number |
+| %i | Prints an integer in base 10 |
+| %u | Prints an unsigned decimal number |
+| %x | Prints a number in hexadecimal (lowercase) |
+| %X | Prints a number in hexadecimal (uppercase) |
+| %% | Prints a percent sign |
 
-## Prototipo
+## **Prototype**
 
-```c
-int	ft_printf(const char *str, ...);
-```
+int	ft\_printf(const char \*str, ...);
 
-## Struttura del progetto
+## **Project Structure**
 
-```
-ft_printf/
-├── ft_printf.c        # Funzione principale e dispatcher dei formati
-├── ft_printf.h        # Header con prototipi e include
-├── ft_print_c.c       # Gestione %c
-├── ft_print_s.c       # Gestione %s
-├── ft_print_d.c       # Gestione %d / %i
-├── ft_print_u.c       # Gestione %u
-├── ft_print_x.c       # Gestione %x
-├── ft_print_x_up.c    # Gestione %X
-├── ft_print_ptr.c     # Gestione %p
-├── libft/             # Libreria libft (dipendenza)
+ft\_printf/  
+├── ft\_printf.c        \# Main function and format dispatcher  
+├── ft\_printf.h        \# Header with prototypes and includes  
+├── ft\_print\_c.c       \# Handles %c  
+├── ft\_print\_s.c       \# Handles %s  
+├── ft\_print\_d.c       \# Handles %d / %i  
+├── ft\_print\_u.c       \# Handles %u  
+├── ft\_print\_x.c       \# Handles %x  
+├── ft\_print\_x\_up.c    \# Handles %X  
+├── ft\_print\_ptr.c     \# Handles %p  
+├── libft/             \# libft library (dependency)  
 └── Makefile
-```
 
-## Compilazione
+## **Compilation**
 
-```bash
-make        # Compila libft e ft_printf → libftprintf.a
-make clean  # Rimuove i file oggetto
-make fclean # Rimuove file oggetto e libreria
-make re     # Ricompila tutto da zero
-```
+make        \# Compiles libft and ft\_printf → libftprintf.a  
+make clean  \# Removes object files  
+make fclean \# Removes object files and the library  
+make re     \# Recompiles everything from scratch
 
-La compilazione produce la libreria statica **`libftprintf.a`**.
+Compilation produces the static library **libftprintf.a**.
 
-## Utilizzo
+## **Usage**
 
-Includi l'header e linka la libreria al tuo progetto:
+Include the header and link the library to your project:  
+\#include "ft\_printf.h"
 
-```c
-#include "ft_printf.h"
-
-int	main(void)
-{
-	ft_printf("Ciao %s, il tuo numero è %d\n", "mondo", 42);
-	return (0);
+int	main(void)  
+{  
+	ft\_printf("Hello %s, your number is %d\\n", "world", 42);  
+	return (0);  
 }
-```
 
-```bash
-cc main.c -L. -lftprintf -o test
-```
+cc main.c \-L. \-lftprintf \-o test
 
-## Funzioni esterne utilizzate
+## **External Functions Used**
 
-- `write`
-- `va_start` / `va_arg` / `va_copy` / `va_end`
+* write  
+* va\_start / va\_arg / va\_copy / va\_end
 
-## Risorse Utili
+## **Useful Resources**
 
-- [Variadic Arguments in C (stdarg.h)](https://en.cppreference.com/w/c/variadic) — Documentazione di riferimento per le funzioni con numero variabile di argomenti.
-- [Secrets of printf](https://www.academia.edu/24830349/Secrets_of_printf) — Approfondimento sul funzionamento e sul design interno della funzione printf.
-- **Tester per la validazione**:
-  - [Tripouille/printfTester](https://github.com/Tripouille/printfTester)
-  - [paulo-santana/ft_printf_tester](https://github.com/paulo-santana/ft_printf_tester)
-### Utilizzo AI
-L'ai è stato utilizzato per strutturare il makefile e a scopo di debbugging durante i momenti difficili
+* [Variadic Arguments in C (stdarg.h)](https://en.cppreference.com/w/c/variadic) — Reference documentation for functions with a variable number of arguments.  
+* [Secrets of printf](https://www.academia.edu/24830349/Secrets_of_printf) — In-depth look at how the printf function works and its internal design.  
+* **Testers for validation**:  
+  * [Tripouille/printfTester](https://github.com/Tripouille/printfTester)  
+  * [paulo-santana/ft\_printf\_tester](https://github.com/paulo-santana/ft_printf_tester)
+
+## **Author**
+
+**egarlasc** — [42 Rome](https://42roma.it)
