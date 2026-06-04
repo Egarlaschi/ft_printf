@@ -1,3 +1,5 @@
+*This project has been created as part of the 42 curriculum by egarlasc*
+
 # **ft\_printf**
 
 Re-implementation of the standard C library function printf.  
@@ -73,7 +75,5 @@ cc main.c \-L. \-lftprintf \-o test
 * **Testers for validation**:  
   * [Tripouille/printfTester](https://github.com/Tripouille/printfTester)  
   * [paulo-santana/ft\_printf\_tester](https://github.com/paulo-santana/ft_printf_tester)
-
-## **Author**
-
-**egarlasc** — [42 Rome](https://42roma.it)
+### **AI Usage**
+AI was used to make di readme file and to debug in dark times
