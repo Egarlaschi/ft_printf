@@ -6,7 +6,7 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:03:54 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/03 23:15:00 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:03:59 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ int	ft_printf(const char *str, ...)
 			break ;
 		if (str[i] == '%')
 			continue ;
-		// LA DEVI FINI STA CAZZO DI FUNZIONE!!
+		write(1, str[i], 1);
+		count++;
+		i++;
 	}
+	va_end(arg);
+	return (count);
 }
