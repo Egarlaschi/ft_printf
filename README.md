@@ -50,7 +50,7 @@ make re     \# Recompiles everything from scratch
 
 Compilation produces the static library **libftprintf.a**.
 
-## **Usage**
+## **Instruction**
 
 Include the header and link the library to your project:  
 \#include "ft\_printf.h"
@@ -68,7 +68,7 @@ cc main.c \-L. \-lftprintf \-o test
 * write  
 * va\_start / va\_arg / va\_copy / va\_end
 
-## **Useful Resources**
+## **Resources**
 
 * [Variadic Arguments in C (stdarg.h)](https://en.cppreference.com/w/c/variadic) — Reference documentation for functions with a variable number of arguments.  
 * [Secrets of printf](https://www.academia.edu/24830349/Secrets_of_printf) — In-depth look at how the printf function works and its internal design.  
