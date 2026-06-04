@@ -1,3 +1,4 @@
+*This project has been created as part of the 42 curriculum by egarlasc*
 # ft_printf
 
 Reimplementazione della funzione `printf` della libreria standard C.
@@ -84,7 +85,5 @@ cc main.c -L. -lftprintf -o test
 - **Tester per la validazione**:
   - [Tripouille/printfTester](https://github.com/Tripouille/printfTester)
   - [paulo-santana/ft_printf_tester](https://github.com/paulo-santana/ft_printf_tester)
-
-## Autore
-
-**egarlasc** — [42 Roma](https://42roma.it)
+### Utilizzo AI
+L'ai è stato utilizzato per strutturare il makefile e a scopo di debbugging durante i momenti difficili
