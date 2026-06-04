@@ -75,8 +75,15 @@ cc main.c -L. -lftprintf -o test
 ## Funzioni esterne utilizzate
 
 - `write`
-- `malloc` / `free`
 - `va_start` / `va_arg` / `va_copy` / `va_end`
+
+## Risorse Utili
+
+- [Variadic Arguments in C (stdarg.h)](https://en.cppreference.com/w/c/variadic) — Documentazione di riferimento per le funzioni con numero variabile di argomenti.
+- [Secrets of printf](https://www.academia.edu/24830349/Secrets_of_printf) — Approfondimento sul funzionamento e sul design interno della funzione printf.
+- **Tester per la validazione**:
+  - [Tripouille/printfTester](https://github.com/Tripouille/printfTester)
+  - [paulo-santana/ft_printf_tester](https://github.com/paulo-santana/ft_printf_tester)
 
 ## Autore
 
