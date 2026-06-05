@@ -4,11 +4,9 @@ RM          = rm -f
 CC          = cc
 CFLAGS      = -Wall -Werror -Wextra -I. -I$(LIBFT_DIR)
 
-# Configurazione percorsi Libft
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-# Colori per il terminale (Standard POSIX)
 RESET       = \033[0m
 GREEN       = \033[32m
 YELLOW      = \033[33m
@@ -28,24 +26,24 @@ OBJS        = $(SRCS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJS)
-	cp $(LIBFT) $(NAME)
-	$(AR) $(NAME) $(OBJS)
+	@cp $(LIBFT) $(NAME)
+	@$(AR) $(NAME) $(OBJS)
 	@printf "$(GREEN)✓ %s creato con successo!$(RESET)\n" "$(NAME)"
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
 
 %.o: %.c ft_printf.h
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 	@printf "$(BLUE)Compilato:$(RESET) %s\n" "$<"
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 	@make clean -C $(LIBFT_DIR)
 	@printf "$(YELLOW)File oggetto di ft_printf rimossi.$(RESET)\n"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 	@make fclean -C $(LIBFT_DIR)
 	@printf "$(YELLOW)Eseguibile %s rimosso.$(RESET)\n" "$(NAME)"
 
