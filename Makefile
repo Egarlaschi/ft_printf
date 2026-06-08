@@ -2,10 +2,7 @@ NAME        = libftprintf.a
 AR          = ar rcs
 RM          = rm -f
 CC          = cc
-CFLAGS      = -Wall -Werror -Wextra -I. -I$(LIBFT_DIR)
-
-LIBFT_DIR   = ./libft
-LIBFT       = $(LIBFT_DIR)/libft.a
+CFLAGS      = -Wall -Werror -Wextra -I.
 
 RESET       = \033[0m
 GREEN       = \033[32m
@@ -25,9 +22,12 @@ OBJS        = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJS)
-	@cp $(LIBFT) $(NAME)
+$(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
+	@printf "$(GREEN)▐▘▗       ▘  ▗ ▐▘$(RESET)\n"
+	@printf "$(GREEN)▜▘▜▘  ▛▌▛▘▌▛▌▜▘▜▘$(RESET)\n"
+	@printf "$(GREEN)▐ ▐▖▄▖▙▌▌ ▌▌▌▐▖▐ $(RESET)\n"
+	@printf "$(GREEN)      ▌          $(RESET)\n"
 	@printf "$(GREEN)✓ %s creato con successo!$(RESET)\n" "$(NAME)"
 
 $(LIBFT):
@@ -39,12 +39,10 @@ $(LIBFT):
 
 clean:
 	@$(RM) $(OBJS)
-	@make clean -C $(LIBFT_DIR)
 	@printf "$(YELLOW)File oggetto di ft_printf rimossi.$(RESET)\n"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@make fclean -C $(LIBFT_DIR)
 	@printf "$(YELLOW)Eseguibile %s rimosso.$(RESET)\n" "$(NAME)"
 
 re: fclean all

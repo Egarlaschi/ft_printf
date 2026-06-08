@@ -6,7 +6,7 @@
 /*   By: egarlasc <egarlasc@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 11:46:15 by egarlasc          #+#    #+#             */
-/*   Updated: 2026/06/04 10:22:03 by egarlasc         ###   ########.fr       */
+/*   Updated: 2026/06/08 14:15:54 by egarlasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int	ft_print_c(int n)
 	char	c;
 
 	c = (char) n;
-	ft_putchar_fd(c, 1);
+	write(1, &n, 1);
 	return (1);
 }

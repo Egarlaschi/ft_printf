@@ -38,12 +38,11 @@ ft\_printf/
 ├── ft\_print\_x.c       \# Handles %x  
 ├── ft\_print\_x\_up.c    \# Handles %X  
 ├── ft\_print\_ptr.c     \# Handles %p  
-├── libft/             \# libft library (dependency)  
 └── Makefile
 
 ## **Compilation**
 
-make        \# Compiles libft and ft\_printf → libftprintf.a  
+make        \# Compiles ft\_printf → libftprintf.a  
 make clean  \# Removes object files  
 make fclean \# Removes object files and the library  
 make re     \# Recompiles everything from scratch
